@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import reactLogo from '../src/assets/react.svg'
 import Nav from './Nav';
-export default function Header() {
+
+export default function Header(props) {
     return (
-        <header className="w-full h-20 bg-slate-600 flex justify-between items-center px-7">
+        <header className={props.className}>
             <div className="cursor-pointer">
                 <img src={reactLogo} className="" alt="Vite logo" />
             </div>
@@ -10,3 +12,7 @@ export default function Header() {
         </header>
     );
 }
+
+Header.propTypes = {
+    className: PropTypes.string.isRequired
+  }

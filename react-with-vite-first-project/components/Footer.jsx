@@ -1,7 +1,13 @@
-export default function Footer() {
+import PropTypes from 'prop-types'
+export default function Footer(props) {
+    const {className} = props
     return (
-        <footer className="w-full h-24 bg-slate-600 flex justify-center items-center">
+        <footer className={className}>
             <p className="text-4xl text-white">Footer</p>
         </footer>
     );
+}
+
+Footer.propTypes = {
+    className: PropTypes.string.isRequired
 }

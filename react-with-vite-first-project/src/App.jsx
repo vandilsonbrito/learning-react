@@ -7,9 +7,9 @@ function App() {
   
   return (
       <>
-        <Header />
+        <Header className="w-full h-20 bg-slate-600 flex justify-between items-center px-7" />
         <Main/>
-        <Footer/>
+        <Footer className='w-full h-20 bg-slate-600 flex justify-center items-center'/>
       </>
   )
 }
