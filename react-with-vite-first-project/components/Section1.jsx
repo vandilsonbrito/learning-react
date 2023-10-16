@@ -4,6 +4,7 @@ export default function Section1(props) {
         <section className="w-full h-80 bg-white flex p-5 justify-around items-center"> 
             <p className="text-2xl text-center px-40 leading-relaxed">{props.children}</p>
         </section>
+        
     );
 }
 
