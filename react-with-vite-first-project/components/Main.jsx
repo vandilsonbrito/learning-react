@@ -13,5 +13,5 @@ export default function Main(props) {
 }
 
 Main.propTypes = {
-    children: PropTypes.string.isRequired
+    children: PropTypes.object.isRequired
   }
