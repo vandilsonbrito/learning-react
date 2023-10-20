@@ -5,6 +5,7 @@ import SectionBlog from '../components/Sections/SectionBlog'
 import Home from '../components/Home/Home'
 import Layouts from '../components/Layouts/Layouts'
 import Login from '../components/Login/Login'
+import Products from '../components/Products/Products'
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
               <Route path='/Contact' element={<SectionContact/>} />
               <Route path='/Blog' element={<SectionBlog/>} />
               <Route path='/Login' element={<Login/>} />
+              <Route path='/Products/' element={<Products/>} />
+              <Route path='/Products/:id' element={<Products/>} />
           </Route>
                 
             
