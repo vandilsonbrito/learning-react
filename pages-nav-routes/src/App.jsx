@@ -11,26 +11,17 @@ function App() {
   return (
     <div className='w-full h-screen bg-white'>
         <Routes>
-              <Route path='/' element={
-                  <Layouts>
-                      <Home/>
-                  </Layouts>
-              }/>
-                <Route path='/About' element={
-                    <Layouts>
-                      <SectionAbout/>
-                    </Layouts>  
-                }/>
-              <Route path='/Contact' element={
-                    <Layouts>
-                      <SectionContact/>
-                    </Layouts>
-              }/>
-            < Route path='/Blog' element={
-                    <Layouts>
-                      <SectionBlog/>
-                    </Layouts>
-            }/>
+          <Route path='/' element={<Layouts/>}>
+
+              <Route index element={<Home/>} />
+              <Route path='/About' element={<SectionAbout/>} />
+              <Route path='/Contact' element={<SectionContact/>} />
+              <Route path='/Blog' element={<SectionBlog/>} />
+
+          </Route>
+                
+            
+                
         </Routes>
     </div>
   )
