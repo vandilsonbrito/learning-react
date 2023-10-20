@@ -1,22 +1,36 @@
 import { Route, Routes } from 'react-router-dom'
-import Header from '../components/Header/Header'
 import SectionAbout from '../components/Sections/SectionAbout'
 import SectionContact from '../components/Sections/SectionContact'
 import SectionBlog from '../components/Sections/SectionBlog'
-/* import Contact from '../components/Contact/Contact'
-import About from '../components/About/About'
-import Blog from '../components/Blog/Blog' */
+import Home from '../components/Home/Home'
+import Layouts from '../components/Layouts/Layouts'
 
 
 function App() {
 
   return (
     <div className='w-full h-screen bg-white'>
-        <Header/>
         <Routes>
-            <Route path='/About' element={<SectionAbout/>}/>
-            <Route path='/Contact' element={<SectionContact/>}/>
-            <Route path='/Blog' element={<SectionBlog/>}/>
+              <Route path='/' element={
+                  <Layouts>
+                      <Home/>
+                  </Layouts>
+              }/>
+                <Route path='/About' element={
+                    <Layouts>
+                      <SectionAbout/>
+                    </Layouts>  
+                }/>
+              <Route path='/Contact' element={
+                    <Layouts>
+                      <SectionContact/>
+                    </Layouts>
+              }/>
+            < Route path='/Blog' element={
+                    <Layouts>
+                      <SectionBlog/>
+                    </Layouts>
+            }/>
         </Routes>
     </div>
   )
