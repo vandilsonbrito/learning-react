@@ -13,8 +13,8 @@ function App() {
   return (
     <div className='w-full h-screen bg-white'>
         <Routes>
+          
           <Route path='/' element={<Layouts/>}>
-
               <Route index element={<Home/>} />
               <Route path='/About' element={<SectionAbout/>} />
               <Route path='/Contact' element={<SectionContact/>} />
@@ -23,9 +23,7 @@ function App() {
               <Route path='/Products/' element={<Products/>} />
               <Route path='/Products/:id' element={<Products/>} />
           </Route>
-                
-            
-                
+      
         </Routes>
     </div>
   )
